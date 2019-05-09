@@ -25,19 +25,36 @@ shinyUI(fluidPage( #create the overall page
   # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
     sidebarPanel(
-      radioButtons("traits", #the input variable that the value will go into
-                   "Choose a trait to display:",
-                   c("Plant height",
+      radioButtons("traits1", #the input variable that the value will go into
+                   "Choose your first trait to display:",
+                   c("`Plant height`",
                      "Seed length",
                      "Seed width",
                      "Seed volume",
                      "Seed surface area",
                      "Protein content",
-                     "Amylose content")
-      )),
+                     "Amylose content"),
+      radioButtons("traits2", #the input variable that the value will go into
+                  "Choose your second trait to display:",
+                  c("Plant height",
+                    "Seed length",
+                    "Seed width",
+                    "Seed volume",
+                    "Seed surface area",
+                    "Protein content",
+                    "Amylose content"),
+      radioButtons("traits3", #the input variable that the value will go into
+                   "Choose your third trait to display:",
+                   c("Plant height",
+                   "Seed length",
+                   "Seed width",
+                   "Seed volume",
+                   "Seed surface area",
+                   "Protein content",
+                   "Amylose content")
+      )))),
     
     # Show a plot of the generated distribution
-    mainPanel(plotOutput("scatterPlot")
-    )
-  )
+ mainPanel(plotOutput("scatterPlot"))
 ))
+)
