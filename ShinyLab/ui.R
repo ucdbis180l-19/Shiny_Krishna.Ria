@@ -14,6 +14,7 @@ library(shiny)
 shinyUI(fluidPage( #create the overall page
   
   # Application title
+<<<<<<< HEAD
   titlePanel("Iris Data"),
   
   # Some helpful information
@@ -21,6 +22,15 @@ shinyUI(fluidPage( #create the overall page
            "iris species.  Please use the radio box below to choose a trait",
            "for plotting"),
   
+=======
+  titlePanel("RICE Data"),
+  
+  # Some helpful information
+  helpText("This application creates a scatterplot to show the relationship between",
+           "three traits chosen.  Please use the radio box below to choose a trait",
+           "for plotting"),
+  
+>>>>>>> 21219fe75283621226ce2258af6a22bacce53732
   # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
     sidebarPanel(
