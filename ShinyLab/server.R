@@ -32,6 +32,6 @@ shinyServer(function(input, output) {
     ggplot(data = Rice.data,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 mapping =  aes_string(x=input$traits1, y=input$traits2,fill=input$traits3)) + geom_point()
+                 mapping =  aes_string(x=input$traits1, y=inut$traits2,fill=input$traits3)) + geom_point()
   })
 })

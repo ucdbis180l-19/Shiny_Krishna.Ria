@@ -28,33 +28,30 @@ shinyUI(fluidPage( #create the overall page
       radioButtons("traits1", #the input variable that the value will go into
                    "Choose your first trait to display:",
                    c("`Plant height`",
-                     "Seed length",
-                     "Seed width",
-                     "Seed volume",
-                     "Seed surface area",
-                     "Protein content",
-                     "Amylose content"),
+                     "`Seed length`",
+                     "`Seed width`",
+                     "`Seed volume`",
+                     "`Seed surface area`",
+                     "`Protein content`",
+                     "`Amylose content`"),
       radioButtons("traits2", #the input variable that the value will go into
                   "Choose your second trait to display:",
-                  c("Plant height",
-                    "Seed length",
-                    "Seed width",
-                    "Seed volume",
-                    "Seed surface area",
-                    "Protein content",
-                    "Amylose content"),
+                  c("`Plant height`",
+                    "`Seed length`",
+                    "`Seed width`",
+                    "`Seed volume`",
+                    "`Seed surface area`",
+                    "`Protein content`",
+                    "`Amylose content`"),
       radioButtons("traits3", #the input variable that the value will go into
                    "Choose your third trait to display:",
-                   c("Plant height",
-                   "Seed length",
-                   "Seed width",
-                   "Seed volume",
-                   "Seed surface area",
-                   "Protein content",
-                   "Amylose content")
-      )))),
-    
-    # Show a plot of the generated distribution
- mainPanel(plotOutput("scatterPlot"))
+                   c("`Plant height`",
+                   "`Seed length`",
+                   "`Seed width`",
+                   "`Seed volume`",
+                   "`Seed surface area`",
+                   "`Protein content`",
+                   "`Amylose content`")
+      )))
+),mainPanel(plotOutput("scatterPlot")))
 ))
-)
