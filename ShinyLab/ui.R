@@ -20,7 +20,7 @@ shinyUI(fluidPage( #create the overall page
   # Some helpful information
   helpText("This application creates a scatterplot to show the relationship between",
            "three traits chosen.  Please use the radio box below to choose a trait",
-           "for plotting"),
+           "for plotting:"),
   
   # Sidebar with a radio box to input which trait will be plotted
   sidebarLayout(
@@ -33,7 +33,7 @@ shinyUI(fluidPage( #create the overall page
                      "`Seed volume`",
                      "`Seed surface area`",
                      "`Protein content`",
-                     "`Amylose content`"),
+                     "`Amylose content`"), selected = NULL),
       radioButtons("traits2", #the input variable that the value will go into
                   "Choose your second trait to display:",
                   c("`Plant height`",
@@ -42,7 +42,7 @@ shinyUI(fluidPage( #create the overall page
                     "`Seed volume`",
                     "`Seed surface area`",
                     "`Protein content`",
-                    "`Amylose content`"),
+                    "`Amylose content`"), selected = NULL),
       radioButtons("traits3", #the input variable that the value will go into
                    "Choose your third trait to display:",
                    c("`Plant height`",
@@ -51,7 +51,9 @@ shinyUI(fluidPage( #create the overall page
                    "`Seed volume`",
                    "`Seed surface area`",
                    "`Protein content`",
-                   "`Amylose content`")
-      )))
-),mainPanel(plotOutput("scatterPlot")))
-))
+                   "`Amylose content`"), selected = NULL)
+    
+    # Show a plot of the generated distribution
+    
+), mainPanel(plotOutput("scatterPlot"))
+)))
