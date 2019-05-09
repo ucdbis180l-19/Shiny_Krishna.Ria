@@ -32,7 +32,7 @@ shinyUI(fluidPage( #create the overall page
                      "`Seed volume`",
                      "`Seed surface area`",
                      "`Protein content`",
-                     "`Amylose content`"),
+                     "`Amylose content`"), selected ="`Plant height",
       radioButtons("traits2", #the input variable that the value will go into
                   "Choose your second trait to display:",
                   c("`Plant height`",
@@ -41,7 +41,7 @@ shinyUI(fluidPage( #create the overall page
                     "`Seed volume`",
                     "`Seed surface area`",
                     "`Protein content`",
-                    "`Amylose content`"),
+                    "`Amylose content`"), selected ="`Plant height",
       radioButtons("traits3", #the input variable that the value will go into
                    "Choose your third trait to display:",
                    c("`Plant height`",
@@ -50,11 +50,11 @@ shinyUI(fluidPage( #create the overall page
                    "`Seed volume`",
                    "`Seed surface area`",
                    "`Protein content`",
-                   "`Amylose content`")
-      ))),
+                   "`Amylose content`"), selected ="`Plant height"
+      )))
     
     # Show a plot of the generated distribution
-    mainPanel(plotOutput("scatterPlot")
-    )
+    
+    ,mainPanel(plotOutput("scatterPlot"))
   )
 )))
