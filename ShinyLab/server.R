@@ -15,6 +15,7 @@ library(shiny)
 library(ggplot2)
 library(tidyverse)
 
+
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
   
@@ -28,16 +29,16 @@ shinyServer(function(input, output) {
   output$scatterPlot <- renderPlot({
     
     # set up the plot
-    pl <- ggplot(data = iris,
+    pl <- ggplot(data = RiceDiversity.44K.MSU6.Phenotypes.csv,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x= input$species,
-                            y="Sepal.Length"
-                            
+                 aes_string(x=input$traits1,
+                            y=input$traits2,
+                            fill=input$traits3
                  )
     )
     
     # draw the boxplot for the specified trait
-    pl + geom_boxplot()
+    pl + geom_point()
   })
 })
