@@ -14,8 +14,6 @@ library(shiny)
 shinyUI(fluidPage( #create the overall page
   
   # Application title
-
-
   titlePanel("RICE Data"),
   
   # Some helpful information
@@ -23,18 +21,3 @@ shinyUI(fluidPage( #create the overall page
            "three traits chosen.  Please use the radio box below to choose a trait",
            "for plotting"),
   
-  # Sidebar with a radio box to input which trait will be plotted
-  sidebarLayout(
-    sidebarPanel(
-      radioButtons("species", #the input variable that the value will go into
-                   "Choose a species to display:",
-                   c("setosa",
-                     "versicolor",
-                     "virginica")
-      )),
-    
-    # Show a plot of the generated distribution
-    mainPanel(plotOutput("boxPlot")
-    )
-  )
-))
