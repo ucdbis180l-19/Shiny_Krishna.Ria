@@ -17,7 +17,8 @@ library(tidyverse)
 
 # Import Rice Data Set to apply user interface code.
 
-Rice.data <- read_csv("/home/ubuntu/Assignments/Shiny_Krishna.Ria/ShinyLab/RiceDiversity.44K.MSU6.Phenotypes.csv")
+
+Rice.data <- read_csv("RiceDiversity.44K.MSU6.Phenotypes.csv")
 
 # Define server logic required to draw a scatter plot.
 shinyServer(function(input, output) {
